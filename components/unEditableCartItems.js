@@ -9,7 +9,7 @@ export default function UnEditableCartItems(){
     const handleRemove = (e)=>{
         dispatch(removeProductFromOrder(e.target.id))
     }
-    const total = productsInCart.reduce((previousValue, currentValue) => previousValue + Number(currentValue.quantity), 0)
+    const total = productsInCart.reduce((previousValue, currentValue) => Number(previousValue) + Number(currentValue.quantity)*Number(currentValue.cost), 0)
 
     return (
         <table className={styles.main}>
