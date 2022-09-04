@@ -1,0 +1,32 @@
+@import 'variables';
+
+.container{
+  height: 500px;
+  position: relative;
+  background: {
+    image: url('../public/home-images/istock000044051102large.jpg');
+    repeat: no-repeat;
+    size: cover;
+  }
+    div {
+      position: absolute;
+      bottom: 100px;
+      width: 50%;
+      .welcomeHead {
+        color: $myGreenColor;
+  
+        font: {
+          size: 30px;
+        }
+      }
+  
+      p {
+        color: rgb(20, 15, 15);
+        font: {
+          size: 20px;
+          weight: 700
+        }
+      }
+    }
+}
+

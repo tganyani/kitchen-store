@@ -1,7 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import prisma from '../../lib/prisma'
+import prisma from '../../../lib/prisma'
 import nc from 'next-connect'
-import {upload} from '../../middleware/commentImageUpload'
+import { upload } from '../../../middleware/productImageUpload'
 export const config = {
   api: {
     bodyParser:false
@@ -20,16 +19,15 @@ const handler = nc({
   .use(upload.single('image'))
   .post(async(req, res) => {
     try {
-      await prisma.testimony.create({
+      const product = await prisma.product.create({
         data: {
-          customer: req.body.customer,
-          message: req.body.message,
+          cost: Number(req.body.cost),
           image: req.file.filename
         }
       })
-      console.log(req.file)
+      console.log(product)
       res.json({
-        message: "Thank you for your feed back"
+        message: "Product created successfully"
       })
     } catch (error) {
         console.error(error)
@@ -37,7 +35,7 @@ const handler = nc({
   })
   .get(async (req, res)=>{
 
-    res.json(await prisma.testimony.findMany())
+    res.json(await prisma.product.findMany())
   })
 export default handler;
 

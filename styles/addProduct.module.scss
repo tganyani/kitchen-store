@@ -1,0 +1,39 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .submain1 {
+        padding: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-top: 150px;
+        width: 40%;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 0 1px white;
+        label{
+            margin-bottom: 10px;
+    
+        }
+        input{
+            margin-bottom: 30px;
+            outline: none;
+            height: 40px;
+        }
+        button{
+            height: 40px;
+            background-color: black;
+            color: white;
+            &:hover{
+                opacity: 0.8
+            }
+        }
+       
+
+    }
+}
+@media only screen and (max-width: 700px) {
+    .submain1 {
+        width: 70% !important;
+    }
+}
+

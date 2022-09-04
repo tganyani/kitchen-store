@@ -1,0 +1,44 @@
+@import 'variables';
+
+
+.products{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    .productCard{
+        width: 400px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-bottom: 30px;
+        box-shadow: 0 0 2px rgb(218, 211, 211);
+        &:hover {
+                box-shadow: 0 0 5px rgb(218, 211, 211);
+                opacity: 0.7;
+            }
+        .productsImage{
+            object-fit: cover;
+            img{
+                width: 400px;
+                height: 400px;
+            }
+        }
+        .cardBody{
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap; 
+            justify-content: space-between;
+            align-items: center;
+            button {
+                width: 150px;
+                height: 40px;
+                background-color: $myGreenColor;
+                color: white;
+                font-size: 1.3em;
+                border: none;
+            }
+        }
+    }
+}

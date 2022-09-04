@@ -1,0 +1,58 @@
+@import 'variables';
+
+.main{
+    margin-top: 90px;
+    .subMain1 {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+
+        .submain21{
+            img{
+                width: 500px;
+                height: 500px;
+            }
+        }
+        .submain22{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            font-size: 1.6em;
+            button {
+                width: 300px;
+                height: 70px;
+                background-color: $myGreenColor;
+                color:white;
+                border: none;
+                font: {
+                    size: 1em;
+                    weight: 400
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .subMain1{
+        flex-flow: column nowrap !important;
+        img{
+            width: 400px !important;
+            height: 400px !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+

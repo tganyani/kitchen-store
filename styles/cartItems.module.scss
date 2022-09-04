@@ -1,0 +1,14 @@
+.main {
+    width: 100%;
+    th{
+        text-align: left;
+    }
+    td{
+        text-align: left;
+        button{
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}

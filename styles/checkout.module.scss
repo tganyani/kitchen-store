@@ -1,0 +1,32 @@
+.main{
+    margin-top: 79px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+   
+    .submain1{
+        display: flex;
+        flex-flow: column nowrap;
+        box-shadow: 0 0 1px grey;
+        padding: 30px;
+        &:hover{
+            box-shadow: 0 0 3px grey;
+        }
+    }
+    .submain2{
+        width: 40%;
+        max-height: 75vh;
+        overflow-y: scroll;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .main{
+        flex-flow: column-reverse nowrap !important;
+        .submain2{
+            width: 100%;
+        }
+    } 
+}
+

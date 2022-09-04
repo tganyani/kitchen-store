@@ -1,0 +1,51 @@
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 60px;
+    .submain11{
+        width: 40%;
+        h3{
+            font: {
+                size: 25px;
+                weight: 600
+            }
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    .submain12{
+        width: 50%;
+        display: flex;
+        flex-flow: row nowrap;
+        input {
+            width: 70%;
+            height: 40px;
+            outline: none;
+            font-size: 16px;
+        }
+        button{
+            width: 30%;
+            height: 40px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .main{
+        flex-flow: column nowrap;
+        padding: 0;
+        .submain11{
+            width: 80%;
+        }
+        .submain12{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@import 'variables';
+$searchInputHieght: 30px;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    .storeName{
+        h4{
+            span{
+                color: $myGreenColor;
+                font: {
+                    size: 1.5rem;
+                }
+            }
+        }
+    }
+    .searchInput{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        width: 40%;
+        input{
+            width: 80%;
+            height: $searchInputHieght;
+            border: 1px solid $myGreenColor;
+            outline: none;
+        }
+        .iconDiv{
+            background-color: $myGreenColor;
+            height: $searchInputHieght;
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 15px 15px 0;
+            color: white !important;
+
+        }
+    }
+    .navlistsSmallScreen{
+        list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
+        li {
+             margin-bottom: 30px;
+             &:hover{
+                color: $myGreenColor;
+             }
+             a{
+                height: 40px;
+             }
+        }
+    }
+    .navlists{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        li {
+             margin-left: 30px;
+             &:hover{
+                color: $myGreenColor;
+             }
+             a{
+                height: 40px;
+             }
+        }
+    }
+        .menuIcon {
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+                &:hover{
+                    border: 2px solid $myGreenColor;
+                    border-radius: 5px;
+                }
+            }
+        }
+}
+@media only screen and (max-width:850px){
+    .searchInput{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .navbar{
+        .navlists{
+            display: none;
+        }
+        .menuIcon{
+            div{
+                display: flex;
+            }
+        }
+    }
+}

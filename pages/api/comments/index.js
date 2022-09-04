@@ -1,7 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import prisma from '../../lib/prisma'
+import prisma from '../../../lib/prisma'
 import nc from 'next-connect'
-import {upload} from '../../middleware/commentImageUpload'
+import { upload } from '../../../middleware/commentImageUpload'
 export const config = {
   api: {
     bodyParser:false

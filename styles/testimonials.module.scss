@@ -1,0 +1,81 @@
+@import 'variables';
+
+.main {
+    margin: {
+        top: 70px;
+        bottom: 70px;
+    }
+    .addButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+        button{
+            width: 200px;
+            height: 35px;
+            outline: none;
+            background-color: black;
+            color: white;
+            font: {
+                size: 1.1rem;
+                weight: 500
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+   
+    .headerTitle{
+        h4{
+            text-align: center;
+            color: grey;
+            font: {
+                size: 1.4em;
+                weight: 500
+            }
+            #qoute{
+                color: $myGreenColor;
+                font-size: 30px;
+            }
+        }
+    }
+    .testimonials {
+        display: flex;
+        flex-flow: row;
+        overflow-x: scroll;
+        width: auto;
+
+        .card {
+            height: 220px;
+            display: flex;
+            flex-flow: column nowrap;
+            box-shadow: 0 0 3px grey;
+            border-radius: 20px;
+            margin-left: 20px;
+
+            &:hover {
+                box-shadow: 0 0 8px grey;
+                opacity: 0.7;
+            }
+
+            .cardBody {
+                height: 200px;
+                width: 400px;
+                overflow: hidden;
+                padding: 8px;
+
+                img {
+                    float: left;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                }
+
+            }
+            .cardFooter {
+                padding-left: 20px;
+            }
+        }
+    }
+}
